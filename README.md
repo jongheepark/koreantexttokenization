@@ -74,10 +74,11 @@ def process_text(text):
         for token in result[0][0]:
             if token.tag in ['NNG', 'NNP']:  # Common and proper nouns
                 nouns.append(token.form)
-                
+
+        # Join the extracted nouns with spaces and return        
         return ' '.join(nouns)
     except Exception as e:
-        # Join the extracted nouns with spaces and return
+        
         print(f'Error: {e}')
         return ''
 
