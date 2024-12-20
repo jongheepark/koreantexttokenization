@@ -92,7 +92,7 @@ result_df <- sample_df %>%
 print(result_df)
 ```
 
-Expected output will look something like this:
+Output will look like this:
 
 ```r
 # A tibble: 5 × 4
@@ -105,38 +105,33 @@ Expected output will look something like this:
 5     5 2024-01-05 NA                                    ""       
 ```
 
-## Explanation
-
-This code does the following:
-
-1. Creates a sample dataframe with Korean text data
-2. Sets up Python environment through reticulate
-3. Defines two Python functions:
-   - `process_text()`: Processes individual text entries
-   - `process_dataframe()`: Processes multiple texts with progress tracking
-4. Extracts nouns using Kiwi analyzer
-5. Handles null values and exceptions
-6. Returns tokenized results as space-separated strings
-
 ## Notes
 
 - The code extracts only nouns (NNG: common nouns, NNP: proper nouns)
-- Empty or NA values are handled gracefully
 - Progress tracking is included through tqdm
 - The original dataframe structure is preserved
 
 ## Language Tags in Kiwi
-
-Common tags used in this example:
-- NNG: General Noun (일반 명사)
-- NNP: Proper Noun (고유 명사)
-
 You can modify the tag filtering in `process_text()` to extract different parts of speech as needed.
 
-## Contributing
+Common tags used in this example:
+- NNG: General Noun (일반 명사)  - e.g., 책, 학교
+- NNP: Proper Noun (고유 명사)  - e.g., 서울, 철수
+- NNB: 의존 명사 (Dependent Noun) - e.g., 것, 수
+- NR: 수사 (Numeral) - e.g., 하나, 둘
+- NP: 대명사 (Pronoun) - e.g., 나, 너
+- VV: 동사 (Verb) - e.g., 먹다, 가다
+- VA: 형용사 (Adjective) - e.g., 예쁘다, 크다
+- VX: 보조 용언 (Auxiliary Verb) - e.g., ~하다, ~되다
+- VCP: 긍정 지정사 (Copula) - 이다
+- VCN: 부정 지정사 (Negative Copula) - 아니다
+- MM: 관형사 (Determinative) - e.g., 이, 그, 저
+- MAG: 일반 부사 (General Adverb) - e.g., 매우, 빨리
+- MAJ: 접속 부사 (Conjunctive Adverb) - e.g., 그러나, 하지만
 
+
+## Contributing
 Feel free to submit issues and enhancement requests!
 
 ## License
-
 This project is licensed under the MIT License - see the LICENSE file for details.
