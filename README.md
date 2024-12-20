@@ -59,10 +59,14 @@ from tqdm import tqdm
 
 def process_text(text):
     try:
+        # Handle null/NA values from the dataframe
         if pd.isna(text):
             return ''
             
         kiwi = Kiwi()
+        # Analyze the text
+        # result[0][0] contains the morpheme analysis
+        # Each token has properties like form (actual text) and tag (part of speech) 
         result = kiwi.analyze(str(text))
         
         # Extract only nouns
@@ -73,11 +77,13 @@ def process_text(text):
                 
         return ' '.join(nouns)
     except Exception as e:
+        # Join the extracted nouns with spaces and return
         print(f'Error: {e}')
         return ''
 
 def process_dataframe(texts):
-    # Show progress with tqdm
+    # Apply process_text to each text in the input
+    # tqdm adds a progress bar to track processing status
     return [process_text(text) for text in tqdm(texts, desc='Tokenizing')]
 ")
 ```
