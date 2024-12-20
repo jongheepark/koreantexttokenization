@@ -1,4 +1,4 @@
-# korean text tokenization using python within R
+# korean text tokenization using Python within R
 This repository demonstrates how to perform Korean text tokenization using the `kiwipiepy` library through R's `reticulate` package. 
 The example shows how to extract nouns from Korean text data and process them in a dataframe. 
 
