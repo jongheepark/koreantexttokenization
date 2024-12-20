@@ -1,6 +1,11 @@
-# koreantexttokenization
+# korean text tokenization
 This repository demonstrates how to perform Korean text tokenization using the `kiwipiepy` library through R's `reticulate` package. 
-The example shows how to extract nouns from Korean text data and process them in a dataframe.
+The example shows how to extract nouns from Korean text data and process them in a dataframe. 
+
+As the traditional KoNLP package is no longer available on CRAN and installing rJava often causes compatibility issues, this approach provides a reliable alternative for Korean text analysis. By leveraging Python's kiwipiepy through R's reticulate, users can easily perform text tokenization without dealing with Java dependencies or compatibility problems.
+
+The example shows how to extract nouns from Korean text data and process them in a dataframe, offering a straightforward solution for Korean natural language processing in R. The code adds tokenized results as a new column in the original R data frame, allowing users to seamlessly utilize R's powerful data manipulation and analysis tools (like tidyverse) with the tokenized outcomes.
+
 
 ## Prerequisites
 
