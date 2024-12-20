@@ -119,12 +119,12 @@ Output will look like this:
 
 ## Notes
 
-- The code extracts only nouns (NNG: common nouns, NNP: proper nouns)
+- The above code extracts only nouns (NNG: common nouns, NNP: proper nouns). See below for other tags.
 - Progress tracking is included through tqdm
 - The original dataframe structure is preserved
 
 ## Language Tags in Kiwi
-You can modify the tag filtering in `process_text()` to extract different parts of speech as needed.
+You can modify the tag filtering in `process_text()` to extract different parts of text as needed.
 
 Common tags used in this example:
 - NNG: General Noun (일반 명사)  - e.g., 책, 학교
